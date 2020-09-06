@@ -20,6 +20,7 @@ RUN mkdir -p opencv-4.1.1/build && \
     -D WITH_CUDA=ON \
     -D CMAKE_LIBRARY_PATH=/usr/local/cuda/lib64/stubs \
     -D BUILD_opencv_cudacodec=OFF \
+    -D BUILD_opencv_python3=ON \
     -D PYTHON_EXECUTABLE=/usr/bin/python3 ..
 
 RUN cd opencv-4.1.1/build/ && make -j4
